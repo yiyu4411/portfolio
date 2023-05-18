@@ -1,0 +1,78 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.3fr 1.7fr 1fr 1fr;
+  grid-template-rows: 0.6fr 1.4fr 1.7fr 0.3fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Grid-Header Grid-Header Grid-Header Grid-Header Grid-Header Grid-Header"
+    "Grid-Navigator Gird-Text Gird-Text Grid-svg Grid-svg Grid-svg"
+    "Grid-Navigator Gird-Text Gird-Text Grid-svg Grid-svg Grid-svg"
+    "Grid-Navigator Gird-Text Gird-Text Grid-Control Grid-Control Grid-Control"
+    "Grid-Navigator Gird-Text Gird-Text Grid-Control Grid-Control Grid-Control";
+}
+
+.Grid-Header { grid-area: Grid-Header; font-size: 60px;}
+
+
+
+.Gird-Text { grid-area: Gird-Text; font-size: 40px; }
+
+.Grid-svg { grid-area: Grid-svg;  }
+
+.Grid-Control { grid-area: Grid-Control;  }
+
+
+.Grid-Control button {
+  margin-right: 50px;
+}
+
+.Grid-Navigator { grid-area: Grid-Navigator;  font-size: 50px;}
+
+.Grid-Navigator button {
+  display: block;
+  margin-bottom: 40px;
+  padding: 10px 20px; 
+  font-size: 16px; 
+}
+
+
+@media screen and (max-width: 810px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "Grid-Header"
+      "Grid-Navigator"
+      "Gird-Text"
+      "Grid-svg"
+      "Grid-Control";
+  }
+}
+
+@media screen and (min-width: 811px) and (max-width: 2560px) {
+  .container {
+    grid-template-columns: 1fr 1fr 0.3fr 1.7fr 1fr 1fr;
+    grid-template-rows: 0.6fr 1.4fr 1.7fr 0.3fr 1fr;
+    grid-template-areas:
+      "Grid-Header Grid-Header Grid-Header Grid-Header Grid-Header Grid-Header"
+      "Grid-Navigator Gird-Text Gird-Text Grid-svg Grid-svg Grid-svg"
+      "Grid-Navigator Gird-Text Gird-Text Grid-svg Grid-svg Grid-svg"
+      "Grid-Navigator Gird-Text Gird-Text Grid-Control Grid-Control Grid-Control"
+      "Grid-Navigator Gird-Text Gird-Text Grid-Control Grid-Control Grid-Control";
+  }
+}
+
+@media screen and (min-width: 2561px) and (max-width: 3839px){
+  .container {
+    grid-template-columns: 1fr 1fr 0.3fr 1.7fr 1fr 1fr;
+    grid-template-rows: 0.6fr 1.4fr 1.7fr 0.3fr 1fr;
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  .container {
+    grid-gap: 10px; 
+  }
+}
